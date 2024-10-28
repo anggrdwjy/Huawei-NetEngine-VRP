@@ -1,0 +1,1 @@
+VRP is Huawei’s network operating system that runs on network devices such as routers and switches. Knowledge of VRP is essential to understanding Huawei products and technologies, and many of the configuration examples provided in this book are based on VRP.
