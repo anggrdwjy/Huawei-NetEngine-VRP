@@ -74,6 +74,24 @@ ntp-service server source-interface all disable
 ntp-service ipv6 server source-interface all disable
 ```
 
+## SNMP
+```
+snmp-agent
+snmp-agent community read cipher [PASSWORD]
+snmp-agent sys-info contact [EMAIL]
+snmp-agent sys-info location [HOSTNAME]
+snmp-agent sys-info version all
+snmp-agent target-host host-name [HOSTNAME] trap address udp-domain [IP_SERVER_SNMP] params cipher [PASSWORD]
+snmp-agent trap source LoopBack0
+snmp-agent protocol source-status all-interface
+```
+Disable SNMP IPv6
+```
+undo snmp-agent protocol source-status ipv6 all-interface
+undo snmp-agent proxy protocol source-status all-interface
+undo snmp-agent proxy protocol source-status ipv6 all-interface
+```
+
 ## LLDP
 ```
 lldp enable
